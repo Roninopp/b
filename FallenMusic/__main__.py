@@ -130,14 +130,6 @@ async def start_command(_, message):
     await add_served_user(message.from_user.id)
     if len(message.text.split()) > 1:
         name = (message.text.split(None, 1)[1]).lower()
-        if name == "help":
-            text, keyboard = await help_parser(message.from_user.mention)
-            await message.delete()
-            return await app.send_text(
-                message.chat.id,
-                text,
-                reply_markup=keyboard,
-            )
         if name[0] == "i":
             await app.send_message(
                     config.LOGGER_ID,
@@ -189,40 +181,6 @@ async def start_command(_, message):
                 parse_mode="markdown",
                 reply_markup=key,
             )
-    return await message.reply_photo(
-        photo=config.START_IMG,
-        caption=home_text_pm,
-        reply_markup=InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴩ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="❄ ʜᴇʟᴩ ❄", callback_data="fallen_help"
-                ),
-                InlineKeyboardButton(
-                    text="🥀 ᴏᴡɴᴇʀ 🥀", user_id=F_OWNER
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=config.SUPPORT_CHAT
-                ),
-                InlineKeyboardButton(
-                    text="💘 ᴄʜᴀɴɴᴇʟ 💘", url=config.SUPPORT_CHANNEL
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="☁ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ☁", url="https://github.com/AnonymousR1025/Fallen-Music"
-                )
-            ],
-        ]
-    ),
- )
 
 
 @app.on_callback_query(filters.regex("fallen_home"))
