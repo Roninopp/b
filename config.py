@@ -10,7 +10,7 @@ API_ID = int(getenv("API_ID", "7217645"))
 API_HASH = getenv("API_HASH", "78ba6352dd5cdc166fdef5aa84ba7c67")
 
 ASS_HANDLER = list(getenv("ASS_HANDLER", ".").split())
-BOT_TOKEN = getenv("BOT_TOKEN", "2100096282:AAEWuPQVLGtcR_csGOG2oZZYriTH3jlFlzg")
+BOT_TOKEN = getenv("BOT_TOKEN", "2100096282:AAH9b_lQVKQcqQlPKFRdKmtQCaI3otGOyVo")
 
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "90"))
 LOGGER_ID = int(getenv("LOGGER_ID", "-1001754175512"))
