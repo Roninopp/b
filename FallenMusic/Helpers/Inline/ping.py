@@ -8,11 +8,8 @@ ping_ig = InlineKeyboardMarkup(
                 InlineKeyboardButton(
                     text="sᴜᴩᴩᴏʀᴛ",
                     url=config.SUPPORT_CHAT,
-                ),
-                InlineKeyboardButton(
-                    text="sᴏᴜʀᴄᴇ",
-                    url="https://github.com/AnonymousR1025/Fallen-Music"
                 )
+                
             ]
         ]
     )
