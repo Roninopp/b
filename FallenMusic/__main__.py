@@ -213,7 +213,7 @@ async def fallen_home(_, CallbackQuery):
             ],
             [
                 InlineKeyboardButton(
-                    text="☁ Network ☁", url="https://t.me/imperial_arena
+                    text="☁ Network ☁", url="https://t.me/imperial_arena"
                 )
             ],
         ]
